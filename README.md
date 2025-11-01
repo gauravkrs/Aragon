@@ -7,11 +7,14 @@ A full-stack task management application built with React (TypeScript) frontend 
 ### Frontend
 - ✅ Create, read, update, and delete boards and tasks
 - ✅ Frontend form validations for boards and tasks
-- ✅ State management using React hooks
+- ✅ State management using React hooks and Context API
+- ✅ **Dark/Light theme switching** with persistent theme selection
+- ✅ **Drag and drop functionality** for task management
 - ✅ Hover states for all interactive elements
 - ✅ Responsive layout for different screen sizes
-- ✅ Built with custom React components (no external component library)
-- ✅ Modern UI with Tailwind CSS
+- ✅ **Material-UI component library** with custom theming
+- ✅ **Enhanced loading states** and error handling
+- ✅ Modern UI with Material-UI design system
 
 ### Backend
 - ✅ RESTful API using Node.js and Express
@@ -25,9 +28,12 @@ A full-stack task management application built with React (TypeScript) frontend 
 
 ### Frontend
 - React 18 with TypeScript
-- Tailwind CSS for styling
-- Custom React hooks for state management
+- **Material-UI (MUI)** for component library and styling
+- **@emotion/react & @emotion/styled** for CSS-in-JS styling
+- **@hello-pangea/dnd** for drag and drop functionality
+- Custom React hooks and Context API for state management
 - Fetch API for HTTP requests
+- **Theme switching** with persistent localStorage
 
 ### Backend
 - Node.js with Express
@@ -41,7 +47,8 @@ A full-stack task management application built with React (TypeScript) frontend 
 ```
 ├── frontend/          # React frontend application
 │   ├── src/
-│   │   ├── components/    # React components
+│   │   ├── components/    # React components (Material-UI based)
+│   │   ├── contexts/      # React Context providers (Theme, etc.)
 │   │   ├── hooks/         # Custom React hooks
 │   │   ├── services/      # API service layer
 │   │   └── types/         # TypeScript type definitions
@@ -151,13 +158,33 @@ The frontend will be running on `http://localhost:3000`
 
 ## Usage
 
-1. **Create a Board**: Click "New Board" to create your first task board
-2. **Add Tasks**: Select a board and click "New Task" to add tasks
-3. **Manage Tasks**: 
+1. **Theme Switching**: Toggle between dark and light themes using the theme switcher in the interface
+2. **Create a Board**: Click "New Board" to create your first task board
+3. **Add Tasks**: Select a board and click "New Task" to add tasks
+4. **Manage Tasks**: 
+   - **Drag and drop** tasks between different status columns
    - Edit tasks by clicking the edit icon
-   - Change task status using the dropdown
+   - Change task status using the dropdown or by dragging
    - Delete tasks using the delete icon
-4. **Organize**: Tasks are automatically organized into columns by status (To Do, In Progress, Done)
+5. **Organize**: Tasks are automatically organized into columns by status (To Do, In Progress, Done)
+6. **Responsive Design**: The interface adapts to different screen sizes with Material-UI responsive components
+
+## Theme System
+
+The application features a comprehensive theme system built with Material-UI:
+
+### Features
+- **Dark/Light Mode Toggle**: Users can switch between dark and light themes
+- **Persistent Theme Selection**: Theme preference is saved in localStorage
+- **Custom Color Palette**: Carefully crafted colors for both light and dark modes
+- **Material-UI Integration**: Full integration with MUI's theming system
+- **Responsive Design**: Themes adapt to different screen sizes and components
+
+### Theme Configuration
+- **Light Theme**: Clean, modern light interface with subtle shadows
+- **Dark Theme**: Dark mode optimized for low-light environments
+- **Custom Typography**: Inter font family with consistent typography scale
+- **Component Overrides**: Custom styling for cards, buttons, and other components
 
 ## Development
 
